@@ -7,7 +7,43 @@ var playerMoney = 10;
 // You can also log multiple values at once like this
 // console.log(playerName, playerAttack, playerHealth);
 
-var enemyName = "Roberto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
+console.log(enemyNames);
+console.log(enemyNames[0]);
+console.log(enemyNames[1]);
+console.log(enemyNames[2]);
+// line 16 returns undefined because the is no element attributed to it
+// console.log(enemyNames[3]);
+// find lenegth/
+// console.log(enemyNames.length);
+// find last Element
+// console.log(enemyNames.length -1);
+// loop/
+// Note
+// for([initial expression]; [condition]; [increment expression]) {
+//   statement
+// }
+// for (var i=0; i <3; i++) {
+//   console.log("apple", i);
+// }
+// replace line 26 to 29 with this
+for(var i = 0; i < enemyNames.length; i++) {
+  console.log(enemyNames[i]);
+}
+// again replace line 30 to 32
+for(var i = 0; i < enemyNames.length; i++) {
+  console.log(enemyNames[i]);
+  console.log(i);
+  console.log(enemyNames[i] + " is at " + i + " index");
+}
+
+
+
+
+
+
+
+
 var enemyHealth = 50;
 var enemyAttack = 12;
 
@@ -15,7 +51,7 @@ var fight = function() {
     window.alert("Welcome to Robert Gladiators!");
 };
 
-fight();
+// fight();
 enemyHealth = enemyHealth - playerAttack;
 console.log(
     playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining."
@@ -71,3 +107,7 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
  else {
     window.alert("You need to choose a valid option. Try again!");
   }
+
+
+
+  
