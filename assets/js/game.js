@@ -8,16 +8,28 @@ var playerMoney = 10;
 // console.log(playerName, playerAttack, playerHealth);
 
 var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
-console.log(enemyNames);
-console.log(enemyNames[0]);
-console.log(enemyNames[1]);
-console.log(enemyNames[2]);
+var enemyHealth = 50;
+var enemyAttack = 12;
+// console.log(enemyNames);
+// console.log(enemyNames[0]);
+// console.log(enemyNames[1]);
+// console.log(enemyNames[2]);
 // line 16 returns undefined because the is no element attributed to it
 // console.log(enemyNames[3]);
 // find lenegth/
 // console.log(enemyNames.length);
 // find last Element
 // console.log(enemyNames.length -1);
+
+var fight = function(enemyName) {
+  window.alert("Welcome to Robert Gladiators!");
+
+fight();
+enemyHealth = enemyHealth - playerAttack;
+console.log(
+    playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining."
+);
+}
 // loop/
 // Note
 // for([initial expression]; [condition]; [increment expression]) {
@@ -37,25 +49,6 @@ for(var i = 0; i < enemyNames.length; i++) {
   console.log(enemyNames[i] + " is at " + i + " index");
 }
 
-
-
-
-
-
-
-
-var enemyHealth = 50;
-var enemyAttack = 12;
-
-var fight = function() {
-    window.alert("Welcome to Robert Gladiators!");
-};
-
-// fight();
-enemyHealth = enemyHealth - playerAttack;
-console.log(
-    playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining."
-);
 
 var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
 
