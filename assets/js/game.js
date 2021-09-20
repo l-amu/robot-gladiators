@@ -81,11 +81,9 @@ var fight = function(enemyName) {
 
   }
  
-
-// fight();
+debugger;
 for(var i = 0; i < enemyNames.length; i++) {
-  fight(enemyNames[i]);
-  debugger;
+  // fight(enemyNames[i]);
   fight(enemyNames[i]);
 
 }
