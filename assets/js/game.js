@@ -90,5 +90,5 @@ for(var i = 0; i < enemyNames.length; i++) {
     fight(pickedEnemyName);
 
 }
-var test = ['b', 'c', 'c']
+var test = 'test'
 console.log(test);
