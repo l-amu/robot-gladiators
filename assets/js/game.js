@@ -8,22 +8,20 @@ var playerMoney = 10;
 // console.log(playerName, playerAttack, playerHealth);
 
 var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
-console.log(enemyNames);
-console.log(enemyNames);
-
-for(var i = 0; i < enemyNames.length; i++) {
-  console.log(enemyNames[i]);
-  console.log(i);
-  console.log(enemyNames[i] + " is at " + i + " index");
-}
 var enemyHealth = 50;
 var enemyAttack = 12;
+console.log(enemyNames);
+console.log(enemyNames);
+console.log(enemyNames[0]);
+console.log(1);
+console.log(enemyNames[i] + " is at " + i + " index");
+
+
 
 var fight = function(enemyName) {
 
   while(playerHealth > 0 && enemyHealth > 0) {
     
-    // window.alert("Welcome to Robot Gladiators!");
 
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
     // Shouldn't you be seeing the " would you fight or...." on th console
@@ -57,6 +55,17 @@ var fight = function(enemyName) {
     } else {
       window.alert(playerName + " still has " + playerHealth + " health left.");
     }
+    for(var i = 0; i < enemyNames.length; i++) {
+  if (playerHealth > 0) {
+      window.alert("Welcome to Robot Gladiators! Round" + ( i + 1 ));
+
+      var pickedEnemyName = enemyNames[i];
+        enemyHealth = 50;
+        fight(pickedEnemyName);
+        // console.log(`pickedEnemy: ${pickedEnemyName}`);
+    
+    }
+  }
     // if player choses to skip
   } if (promptFight === "skip" || promptFight === "SKIP") {
     var confirmSkip = window.confirm("Are you sure you'd like to quit?");
@@ -86,12 +95,5 @@ var fight = function(enemyName) {
 
   }
  
-for(var i = 0; i < enemyNames.length; i++) {
-  
-  var pickedEnemyName = enemyNames[i];
-    enemyHealth = 50;
-    fight(pickedEnemyName);
-    // console.log(`pickedEnemy: ${pickedEnemyName}`);
 
-}
 
