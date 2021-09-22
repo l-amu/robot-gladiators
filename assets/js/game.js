@@ -19,6 +19,7 @@ console.log(1);
 var fight = function(enemyName) {
 
   while(playerHealth > 0 && enemyHealth > 0) {
+     
     
 
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
@@ -71,9 +72,8 @@ var fight = function(enemyName) {
     
   }
   debugger;
-  // startGame();
-
-};
+     startGame();
+ };
     
     if (promptFight === "skip" || promptFight === "SKIP") {
       var confirmSkip = window.confirm("Are you sure you'd like to quit?");
@@ -89,7 +89,7 @@ var fight = function(enemyName) {
         fight();
       }
     } else {
-      window.alert("You need to choose a valid option. Try again!");
+//       window.alert("You need to choose a valid option. Try again!");
     }
 
     if (enemyHealth <= 0) {
@@ -105,7 +105,7 @@ var fight = function(enemyName) {
  fight(enemyNames[0]);
  startGame();
 
-
+console.log('hello');
  
 
 
