@@ -53,8 +53,8 @@ var fight = function(enemyName) {
       } else {
         window.alert(playerName + " still has " + playerHealth + " health left.");
       }
-
-  if (promptFight === "skip" || promptFight === "SKIP") {
+ }
+  else if (promptFight === "skip" || promptFight === "SKIP") {
       var confirmSkip = window.confirm("Are you sure you'd like to quit?");
       window.alert(playerName + " has chosen to skip the fight!");
 
@@ -67,11 +67,13 @@ var fight = function(enemyName) {
       } else { // if no (false), ask question again by running fight() again
         fight();
       } 
-      
-      if (promptFight === ""){
+}
+ else {
+  console.log("invalid");
+
           window.alert("You need to choose a valid option. Try again!");
  }
- }
+ 
    
 
  }
@@ -93,12 +95,12 @@ var fight = function(enemyName) {
       
     
     debugger;
-       startGame();
+      //  startGame();
     }
   };
  //should run the fight function, and pass in "roborto"
- fight(enemyNames[0]);
- //startGame();
+//  fight(enemyNames[0]);
+ startGame();
 
 console.log('hello');
  
