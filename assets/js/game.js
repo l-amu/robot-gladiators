@@ -102,6 +102,7 @@ var startGame = function () {
 // fight(enemyNames[0]);
 
 var endGame = function() {
+  debugger;
   if (playerHealth > 0) {
     window.alert("Great job, you've survived the game! You now have a score of " + playerMoney + ".");
   } 
@@ -111,7 +112,9 @@ var endGame = function() {
   var playAgainConfirm = window.confirm("Would you like to play again?");
 
 if (playAgainConfirm) {
-  startGame();
+  // this was startGame but I changed it to gight because it ruined the loop
+  // startGame();
+  fight();
 } 
 else {
   window.alert("Thank you for playing Robot Gladiators! Come back soon!");
