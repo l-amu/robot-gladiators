@@ -12,6 +12,7 @@ var fightOrSkip = function () {
     window.alert("You need to provide a valid answer! Please try again.");
     return fightOrSkip();
   }
+
   promptFight = promptFight.toLowerCase();
 
   // if player picks "skip" confirm and then stop the loop
@@ -44,7 +45,6 @@ var fight = function (enemy) {
     var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
 
     // remove enemy's health by subtracting the amount set in the playerAttack variable
-    var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
 
     enemy.health = Math.max(0, enemy.health - damage);
     console.log(
@@ -108,7 +108,6 @@ var startGame = function () {
       window.alert("You have lost your robot in battle! Game Over!");
       break;
     }
-    // endGame();
   }
   endGame();
 };
@@ -137,8 +136,10 @@ var endGame = function () {
 
 var shop = function () {
   var shopOptionPrompt = window.prompt(
-    "Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one: 'REFILL', 'UPGRADE', or 'LEAVE' to make a choice."
+    "Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter one 1 for REFILL, 2 for UPGRADE, or 3 for LEAVE."
   );
+  shopOptionPrompt = parseInt(shopOptionPrompt);
+
   switch (shopOptionPrompt) {
     case 1:
       playerInfo.refillHealth();
