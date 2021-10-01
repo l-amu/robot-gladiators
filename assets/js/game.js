@@ -12,6 +12,7 @@ var fightOrSkip = function() {
     window.alert("You need to provide a valid answer! Please try again.");
     return fightOrSkip();
   }
+  promptFight = promptFight.toLowerCase();
   // if player picks "skip" confirm and then stop the loop
   if (promptFight === "skip" || promptFight === "SKIP") {
     // confirm player wants to skip
@@ -23,8 +24,10 @@ var fightOrSkip = function() {
       // subtract money from playerMoney for skipping
       playerInfo.playerMoney = playerInfo.money - 10;
       shop();
+      return true;
     }
   }
+  return false;
 };
 // You can also log multiple values at once like this
 // console.log(playerName, playerAttack, playerInfo.health);
@@ -32,7 +35,11 @@ var fightOrSkip = function() {
 var fight = function (enemy) {
   while (playerInfo.health > 0 && enemy.health > 0) {
     // ask player if they'd like to fight or run
-    fightOrSkip(); // <-- Replace code with this function call
+    // fightOrSkip(); // <-- Replace code with this function call
+    if (fightOrSkip()) {
+      // if true, leave fight by breaking loop
+      break;
+    }
   var damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
 
     // remove enemy's health by subtracting the amount set in the playerAttack variable
